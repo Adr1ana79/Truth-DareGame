@@ -1,0 +1,285 @@
+body {
+  font-family: "Sofia Sans", sans-serif;
+  background: linear-gradient(rgba(255, 248, 225, 1), rgba(255, 248, 225, 0.4)), url('./attached_assets/celebration-background-with-colourful-confetti-border-design_1750156770213.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+}
+h1 {
+  color: #ff9800;
+  font-family: Arial, sans-serif;
+}
+.buttons {
+  margin: 20px 0;
+}
+button {
+  background-color: #ffbb00;
+  color: white;
+  border: none;
+  padding: 20px 28px;
+  margin: 0 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: Arial, sans-serif;
+}
+button:hover {
+  background-color: #ff007b;
+}
+
+.sofia-sans-<uniquifier> {
+  font-family: "Sofia Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.output {
+  font-family: "Sofia Sans", sans-serif;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 32px;
+  color: #356eac;
+  opacity: 1;
+}
+
+.output.initial-message {
+  opacity: 0.7;
+}
+
+.loading {
+  opacity: 0.6;
+  color: #666;
+}
+
+.score-section {
+  margin: 14px 0;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+.score-section h3 {
+  margin: 0 0 12px 0;
+  color: #356eac;
+}
+
+.player-setup {
+  margin-bottom: 15px;
+}
+
+.player-setup input {
+  width: 60px;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.start-game-btn {
+  background-color: #4CAF50;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-family: "Sofia Sans", sans-serif;
+  margin-left: 10px;
+}
+
+.start-game-btn:hover {
+  background-color: #45a049;
+}
+
+.players-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.player {
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  text-align: center;
+  min-width: 80px;
+  flex: 1;
+  max-width: 120px;
+
+  display: inline-flex;
+  gap: 10px;
+}
+
+.player input {
+  width: 90%;
+  padding: 3px;
+  margin-bottom: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Sofia Sans", sans-serif;
+}
+
+.player-score {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Sofia Sans", sans-serif
+  color: #ff9800;
+  margin: 3px 0;
+}
+
+.current-player {
+  border: 3px solid #ff9800;
+  background-color: #fff3e0;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.done-btn, .undone-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: "Sofia Sans", sans-serif;
+}
+
+.done-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.done-btn:hover {
+  background-color: #45a049;
+}
+
+.undone-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.undone-btn:hover {
+  background-color: #da190b;
+}
+
+.finish-game-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f01489;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+}
+
+.finish-game-btn:hover {
+  background-color: #db0a7a;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-content h2 {
+  color: #ff9800;
+  margin-bottom: 20px;
+}
+
+.ranking-list {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.ranking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border-left: 4px solid #ff9800;
+}
+
+.ranking-position {
+  font-weight: bold;
+  font-size: 18px;
+  color: #356eac;
+}
+
+.ranking-name {
+  flex-grow: 1;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.ranking-score {
+  font-weight: bold;
+  color: #ff9800;
+  font-size: 18px;
+}
+
+.close-btn, .reset-btn {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.close-btn {
+  background-color: #666;
+}
+
+.close-btn:hover {
+  background-color: #555;
+}
+
+.reset-btn {
+  background-color: #4CAF50;
+}
+
+.reset-btn:hover {
+  background-color: #45a049;
+}
