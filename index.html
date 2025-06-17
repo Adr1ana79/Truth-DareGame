@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truth & Dare Game (Offline)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Truth & Dare Game 🎉</h1>
+    <div class="buttons">
+      <button onclick="showTruth()">Truth</button>
+      <button onclick="showDare()">Dare</button>
+    </div>
+    
+    <div id="output" class="output initial-message">Натисни бутон, за да започнеш!</div>
+
+    <div id="scoreSection" class="score-section">
+      <h3>Играчи</h3>
+      <div id="playerSetup" class="player-setup">
+        <input type="number" id="playerCount" min="2" max="5" value="2" onchange="setupPlayers()">
+        <label for="playerCount">Брой играчи (2-5)</label>
+        <button onclick="startGame()" class="start-game-btn">Започни игра</button>
+      </div>
+
+      <div id="playersContainer" class="players-container" style="display: none;">
+        
+      </div>
+
+      <div id="actionButtons" class="action-buttons" style="display: none;">
+        <button onclick="markDone()" class="done-btn">Done ✓</button>
+        <button onclick="markUndone()" class="undone-btn">Undone ✗</button>
+      </div>
+    </div>
+
+    <button id="finishGameBtn" onclick="finishGame()" class="finish-game-btn" style="display: none;">
+      Finish game
+    </button>
+
+    <div id="resultsModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <h2>Крайни резултати 🏆</h2>
+        <div id="rankingList" class="ranking-list"></div>
+        <button onclick="closeResults()" class="close-btn">Затвори</button>
+        <button onclick="resetGame()" class="reset-btn">Нова игра</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
